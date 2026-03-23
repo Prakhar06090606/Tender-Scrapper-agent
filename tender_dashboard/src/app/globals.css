@@ -1,0 +1,36 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrollbar for long text in cells */
+.scroll-cell {
+  overflow-y: auto;
+  max-height: 120px;
+  scrollbar-width: thin;
+}
+
+/* Sticky table headers */
+.sticky-header th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Fade-in animation for rows loading in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Pulse for the "agent running" indicator */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+.pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
